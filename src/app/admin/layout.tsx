@@ -1,10 +1,10 @@
-import Sidebar from '@/components/admin/Sidebar';
+import Sidebar from '@/components/admin/globaL/Sidebar';
 import React from 'react';
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
     return (
         <div className='flex'>
-            <Sidebar />
+            <Sidebar/>
             {children}
         </div>
     );

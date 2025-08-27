@@ -11,7 +11,7 @@ function Sidebar() {
             <SideLink
                 text='Ventas'
                 href='/admin/ventas'
-                subRoutes={["clientes", "cotizacion", "pagos", "pedidos", "productos", "ventas"]}
+                subRoutes={["usuarios", "cotizacion", "pagos", "pedidos", "productos", "ventas"]}
             />
             <SideLink
                 text='Servicios'
@@ -20,10 +20,6 @@ function Sidebar() {
             <SideLink
                 text='Compras'
                 href='/admin/compras'
-            />
-            <SideLink
-                text='Usuarios'
-                href='/admin/usuarios'
             />
             <SideLink
                 text='Configuracion'
