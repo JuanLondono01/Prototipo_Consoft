@@ -3,7 +3,7 @@ import SideLink from './SideLink';
 
 function Sidebar() {
     return (
-        <div className='border border-[#6E4424] w-1/5 min-h-screen bg-[#6E4424] flex flex-col items-center justify-evenly text-white px-4 py-2'>
+        <div className='border border-primary w-1/5 min-h-screen bg-primary flex flex-col items-center justify-evenly text-white px-4 py-2'>
             <SideLink
                 text='Desempeño'
                 href='/admin/dashboard'
