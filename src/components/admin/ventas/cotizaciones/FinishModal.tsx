@@ -37,8 +37,8 @@ function FinishModal({ isOpen, onClose, onSubmit, user, services }: ModalProps) 
     };
 
     return (
-        <div className='fixed inset-0 bg-black/60 flex items-center justify-center z-50'>
-            <div className='bg-white p-6 rounded-xl w-[500px] relative shadow-lg'>
+        <div className='modal-background'>
+            <div className='modal-frame w-[400px]'>
                 <h2 className='text-xl font-semibold mb-4'>Confirmar Cotización</h2>
 
                 <div className='mb-4'>

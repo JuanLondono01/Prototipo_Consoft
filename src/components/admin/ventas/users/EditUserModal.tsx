@@ -32,8 +32,8 @@ function EditUserModal({ isOpen, onClose, user }: UserModalProps) {
     };
 
     return (
-        <div className='fixed inset-0 bg-black/60 flex items-center justify-center z-50'>
-            <div className='bg-white p-8 rounded-xl max-w-lg w-full mx-4'>
+        <div className='modal-background'>
+            <div className='modal-frame w-[600px]'>
                 <h3 className='text-xl font-semibold text-center mb-6'>
                     EDITAR INFORMACION DE USUARIO
                 </h3>

@@ -12,8 +12,8 @@ function ConfirmarPagoModal({ isOpen, onClose, pago }: ModalProps) {
     if (!isOpen || !pago) return null;
 
     return (
-        <div className='fixed inset-0 bg-black/60 flex items-center justify-center z-50'>
-            <div className='bg-white p-6 rounded-xl w-[500px] relative shadow-lg'>
+        <div className='modal-background'>
+            <div className='modal-frame w-[400px]'>
                 <h2 className='text-xl font-bold mb-4'>Confirmar Pago</h2>
 
                 <label className='block mb-2'>Estado de la transferencia</label>

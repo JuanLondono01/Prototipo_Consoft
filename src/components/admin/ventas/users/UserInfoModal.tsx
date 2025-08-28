@@ -1,4 +1,4 @@
-'use clien';
+'use client';
 import React, { useState } from 'react';
 import { IoMdClose } from 'react-icons/io';
 import EditUserModal from './EditUserModal';
@@ -48,8 +48,8 @@ function UserInfoModal({ isOpen, onClose, user }: UserModalProps) {
     };
 
     return (
-        <div className='fixed inset-0 bg-black/60 flex items-center justify-center z-50'>
-            <div className='bg-white p-6 rounded-xl w-[1050px] h-[900px] relative flex flex-col justify-evenly'>
+        <div className='modal-background'>
+            <div className='modal-frame w-[600px]'>
                 {/* Botón cerrar */}
                 <button
                     onClick={onClose}
@@ -57,8 +57,11 @@ function UserInfoModal({ isOpen, onClose, user }: UserModalProps) {
                     <IoMdClose />
                 </button>
 
-                <h3 className='text-xl font-semibold text-center mb-4'>VER DETALLES DEL USUARIO</h3>
-                <div className='flex flex-col gap-12 text-2xl items-center'>
+                <h3 className='text-lg md:text-xl font-semibold text-center mb-6'>
+                    VER DETALLES DEL USUARIO
+                </h3>
+
+                <div className='flex flex-col gap-6 md:gap-12 text-base md:text-2xl items-center'>
                     <p>Nombre: {user?.nombre}</p>
                     <p>Correo: {user?.correo}</p>
                     <p>Documento: {user?.documento}</p>
@@ -66,20 +69,22 @@ function UserInfoModal({ isOpen, onClose, user }: UserModalProps) {
                     <p>Telefono: {user?.telefono}</p>
                     <p>Rol: {user?.rol}</p>
                     <p>Usuario activo: {user?.activo ? '🟢' : '🔴'}</p>
-                    <div className='grid grid-cols-2 gap-8 w-full'>
+
+                    <div className='grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 w-full'>
                         <button
-                            className='px-6 py-2 rounded-lg bg-amber-100 cursor-pointer text-lg'
+                            className='px-6 py-2 rounded-lg bg-amber-100 cursor-pointer text-base md:text-lg'
                             onClick={() => setEditModal(true)}>
                             Editar Usuario
                         </button>
                         <button
-                            className='px-6 py-2 rounded-lg bg-red-600 text-white cursor-pointer text-lg'
+                            className='px-6 py-2 rounded-lg bg-red-600 text-white cursor-pointer text-base md:text-lg'
                             onClick={() => deleteUser()}>
                             Eliminar Usuario
                         </button>
                     </div>
                 </div>
             </div>
+
             <EditUserModal
                 isOpen={editModal}
                 onClose={() => setEditModal(false)}

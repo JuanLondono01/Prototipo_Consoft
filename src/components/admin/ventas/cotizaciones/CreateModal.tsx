@@ -72,8 +72,8 @@ function CreateModal({ isOpen, onClose, onSubmit, setUserInfo }: ModalProps) {
     };
 
     return (
-        <div className='fixed inset-0 bg-black/60 flex items-center justify-center z-50'>
-            <div className='bg-white p-6 rounded-xl w-[450px] relative shadow-lg'>
+        <div className='modal-background'>
+            <div className='modal-frame w-[400px]'>
                 <h2 className='text-xl font-semibold mb-6 text-center'>Crear Cotización</h2>
 
                 <div className='flex flex-col gap-4'>

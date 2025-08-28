@@ -1,6 +1,14 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-@theme{
-    --color-primary: #6E4424;
-    --color-secondary: #FFF6EF
+@theme {
+    --color-primary: #6e4424;
+    --color-secondary: #fff6ef;
+}
+
+.modal-background {
+    @apply fixed inset-0 bg-black/60 flex justify-center items-center z-50;
+}
+
+.modal-frame {
+    @apply bg-white p-6 rounded-xl relative shadow-lg ;
 }

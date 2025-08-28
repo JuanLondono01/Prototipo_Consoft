@@ -50,31 +50,32 @@ function PagosPage() {
     };
 
     return (
-        <div className='p-10 w-full'>
+        <div className='p-6 md:p-10 w-full'>
             <h2 className='text-3xl font-semibold mb-6'>Gestión de Pagos</h2>
 
-            <div className='bg-gray-100 rounded-3xl p-6 w-full mt-75 h-140'>
-                <table className='w-full'>
+            {/* Tabla responsiva */}
+            <div className='bg-gray-100 rounded-3xl p-6 w-full mt-10 h-auto md:h-140 overflow-x-auto'>
+                <table className='w-full min-w-[600px]'>
                     <thead>
-                        <tr className='text-left font-semibold text-gray-700'>
-                            <th className='py-2 px-4'># Cliente</th>
-                            <th className='py-2 px-4'>Cliente</th>
-                            <th className='py-2 px-4'>Deuda pendiente</th>
-                            <th className='py-2 px-4'>Fecha de ult. Pago</th>
-                            <th className='py-2 px-4'>ROL</th>
+                        <tr className='text-left font-semibold text-gray-700 border-b'>
+                            <th className='py-3 px-4'># Cliente</th>
+                            <th className='py-3 px-4'>Cliente</th>
+                            <th className='py-3 px-4'>Deuda pendiente</th>
+                            <th className='py-3 px-4'>Fecha de ult. Pago</th>
+                            <th className='py-3 px-4'>ROL</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className='divide-y'>
                         {pagos.map((pago) => (
                             <tr
                                 key={pago.id}
-                                className='bg-white rounded-lg shadow mb-2 hover:bg-gray-50 cursor-pointer'
+                                className='bg-white hover:bg-gray-50 cursor-pointer transition-colors'
                                 onClick={() => abrirDetalle(pago)}>
-                                <td className='py-3 px-4'>{pago.id}</td>
-                                <td className='py-3 px-4'>{pago.cliente}</td>
-                                <td className='py-3 px-4'>{pago.deuda}</td>
-                                <td className='py-3 px-4'>{pago.fecha}</td>
-                                <td className='py-3 px-4'>{pago.rol}</td>
+                                <td className='py-3 px-4 truncate'>{pago.id}</td>
+                                <td className='py-3 px-4 truncate'>{pago.cliente}</td>
+                                <td className='py-3 px-4 truncate'>{pago.deuda}</td>
+                                <td className='py-3 px-4 truncate'>{pago.fecha}</td>
+                                <td className='py-3 px-4 truncate'>{pago.rol}</td>
                             </tr>
                         ))}
                     </tbody>
