@@ -70,12 +70,12 @@ function OrderInfoModal({ isOpen, onClose, orderInfo }: OrderInfoModalProps) {
                     <button
                         className='px-6 py-2 rounded-lg bg-amber-100 cursor-pointer text-base md:text-lg'
                         onClick={() => setEditModal(true)}>
-                        Editar Usuario
+                        Editar Pedido
                     </button>
                     <button
                         className='px-6 py-2 rounded-lg bg-red-600 text-white cursor-pointer text-base md:text-lg'
                         onClick={() => deleteOrder()}>
-                        Eliminar Usuario
+                        Eliminar Pedido
                     </button>
                 </div>
             </div>

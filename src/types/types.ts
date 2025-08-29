@@ -22,3 +22,14 @@ export interface Order {
     servicios: ServicesProps[];
     estado: string; // 🟢, 🟡, 🔴
 }
+
+export interface venta {
+    id: string;
+    order: Order;
+}
+
+export interface SaleInfoProps {
+    isOpen: boolean;
+    onClose: () => void;
+    sale?: venta;
+}
