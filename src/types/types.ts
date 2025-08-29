@@ -1,7 +1,10 @@
 export interface ServicesProps {
-    type: string;
-    observations: string;
-    value: number;
+    id?: string
+    type?: string;
+    description?: string;
+    observations?: string;
+    value?: number;
+    status?: boolean
 }
 
 export interface UserProps {
@@ -32,4 +35,10 @@ export interface SaleInfoProps {
     isOpen: boolean;
     onClose: () => void;
     sale?: venta;
+}
+
+export interface DefaultModalProps<T = {}>{
+    isOpen: boolean 
+    onClose: () => void
+    extraProps?: T
 }

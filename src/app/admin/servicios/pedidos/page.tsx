@@ -1,6 +1,6 @@
 'use client';
-import Calendario from '@/components/admin/ventas/pedidos/Calendario';
-import OrderInfoModal from '@/components/admin/ventas/pedidos/OrderInfoModal';
+import Calendario from '@/components/admin/services/pedidos/Calendario';
+import OrderInfoModal from '@/components/admin/services/pedidos/OrderInfoModal';
 import React, { useState } from 'react';
 import { Order } from '@/types/types';
 
