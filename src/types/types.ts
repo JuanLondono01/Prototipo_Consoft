@@ -1,10 +1,10 @@
 export interface ServicesProps {
-    id?: string
+    id?: string;
     type?: string;
     description?: string;
     observations?: string;
     value?: number;
-    status?: boolean
+    status?: boolean;
 }
 
 export interface UserProps {
@@ -37,8 +37,36 @@ export interface SaleInfoProps {
     sale?: venta;
 }
 
-export interface DefaultModalProps<T = {}>{
-    isOpen: boolean 
-    onClose: () => void
-    extraProps?: T
+export interface DefaultModalProps<T = {}> {
+    isOpen: boolean;
+    onClose: () => void;
+    extraProps?: T;
+}
+
+export enum InputTypes {
+    TEXT = 'text',
+    EMAIL = 'email',
+    PASWORD = 'password',
+    DATE = 'date',
+    CHECK = 'checkbox',
+}
+export interface InputFormProps {
+    type: InputTypes;
+    label?: string;
+    id: string;
+    value?: any;
+}
+
+export enum VisitStatus {
+    PENDING = 'Pendiente',
+    CANCELLED = 'Cancelada',
+    CONFIRMED = 'Confirmada',
+}
+
+export interface VisitSProps {
+    id: string;
+    user: UserProps;
+    services: ServicesProps[];
+    fechaVisita: Date;
+    status: VisitStatus;
 }
