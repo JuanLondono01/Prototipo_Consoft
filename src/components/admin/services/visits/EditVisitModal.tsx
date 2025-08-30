@@ -6,7 +6,6 @@ import { IoMdClose } from 'react-icons/io';
 function EditVisitModal({ isOpen, onClose, extraProps }: DefaultModalProps<VisitSProps>) {
     if (!isOpen) return;
 
-
     return (
         <div className='modal-background'>
             <div className='modal-frame w-[500px]'>
@@ -40,9 +39,21 @@ function EditVisitModal({ isOpen, onClose, extraProps }: DefaultModalProps<Visit
                     />
 
                     <select className='py-2 border w-full mt-4 rounded-lg'>
-                        <option selected={extraProps?.status == VisitStatus.CONFIRMED} value={VisitStatus.CONFIRMED}>🟢 Visita Confirmada</option>
-                        <option selected={extraProps?.status == VisitStatus.PENDING} value={VisitStatus.PENDING}>🟡 Visita Pendiente</option>
-                        <option selected={extraProps?.status == VisitStatus.CANCELLED} value={VisitStatus.CANCELLED}>🔴 Visita cancelada</option>
+                        <option
+                            selected={extraProps?.status == VisitStatus.CONFIRMED}
+                            value={VisitStatus.CONFIRMED}>
+                            🟢 Visita Confirmada
+                        </option>
+                        <option
+                            selected={extraProps?.status == VisitStatus.PENDING}
+                            value={VisitStatus.PENDING}>
+                            🟡 Visita Pendiente
+                        </option>
+                        <option
+                            selected={extraProps?.status == VisitStatus.CANCELLED}
+                            value={VisitStatus.CANCELLED}>
+                            🔴 Visita cancelada
+                        </option>
                     </select>
 
                     <div className='my-2 py-2'>

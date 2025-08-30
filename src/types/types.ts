@@ -70,3 +70,20 @@ export interface VisitSProps {
     fechaVisita: Date;
     status: VisitStatus;
 }
+
+export interface CategoryProps {
+    id: string;
+    category: string;
+    desctiption: string;
+    status: boolean;
+    imageUrl: string
+}
+
+export interface ProductProps {
+    id: string;
+    product: string;
+    description: string;
+    category: CategoryProps;
+    imageUrl: string;
+    status: boolean;
+}

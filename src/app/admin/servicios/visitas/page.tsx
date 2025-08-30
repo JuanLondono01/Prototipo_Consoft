@@ -73,7 +73,7 @@ function page() {
                             <p className='truncate max-w-20'>{visit.user.nombre}</p>
                             <p>{visit.user.telefono}</p>
                             <p>{visit.user.direccion}</p>
-                            <p>{visit.services.length > 1 ? visit.services[0].type : 'Varios'}</p>
+                            <p>{visit.services.length > 1 ? 'Varios' : visit.services[0].type}</p>
                             <p>{visit.fechaVisita.toLocaleDateString()}</p>
                             <p className='flex gap-2'>
                                 <BiCheck
